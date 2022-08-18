@@ -1,0 +1,87 @@
+.background {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.border {
+  border: 1px solid white;
+}
+.li {
+  a.active {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 80%;
+      background-color: white;
+      height: 3px;
+      border-radius: 50px;
+      left: 10%;
+      bottom: 0;
+      // transition: 0.4s;
+    }
+  }
+}
+
+.li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  background-color: white;
+  height: 3px;
+  border-radius: 50px;
+  left: 10%;
+  // top: 25px;
+  bottom: 0px;
+  transition: 0.4s;
+  margin-top: 25px;
+}
+.li:hover::after {
+  width: 80%;
+}
+
+.bar {
+  width: 35px;
+  height: 4px;
+  border-radius: 10px;
+  background: white;
+  margin: 3px 0;
+}
+
+.hamberger {
+  border-radius: 4px;
+}
+
+.hambergerActive {
+  .line1 {
+    transform: translateY(5px) rotate(45deg);
+    transition: transform 0.5s ease;
+  }
+  .line3 {
+    transform: translateY(-5px) rotate(-45deg);
+    transition: transform 0.5s ease;
+  }
+  .line2 {
+    display: none;
+  }
+}
+
+.hamnav {
+  a.active {
+    color: var(--theme-color);
+    font-weight: bold;
+  }
+}
+
+.animate-top {
+  position: relative;
+  animation: animatetop 0.8s;
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
