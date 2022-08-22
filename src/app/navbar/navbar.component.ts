@@ -16,7 +16,7 @@ export class NavbarComponent {
     },
     {
       name: 'About',
-      url: 'about',
+      url: 'about-us',
       index: 1,
     },
     {
