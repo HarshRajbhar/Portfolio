@@ -15,7 +15,12 @@ import { ServicesModule } from './services/services.module';
     NavbarComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, AboutUsModule, ServicesModule],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    AboutUsModule,
+    ServicesModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

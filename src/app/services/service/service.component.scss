@@ -17,3 +17,46 @@
 .border {
   border: 1px solid;
 }
+
+.shadow {
+  box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+  transition: 0.6s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media screen and (max-width: 1025px) {
+  .Grid {
+    grid-template-columns: 48% 48%;
+    row-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Grid {
+    grid-template-columns: 50% 50%;
+    row-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 648px) {
+  .Grid {
+    grid-template-columns: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Grid {
+    grid-template-columns: 100%;
+  }
+}
