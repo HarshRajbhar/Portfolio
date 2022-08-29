@@ -57,11 +57,18 @@
     />
   </div>
   <div
-    class="bg-[#0077ff6e] w-full text-white h-full w3-animate-opacity z-10 flex justify-center items-center"
-    *ngFor="let array of testimonial; let i = index"
-    [class.hidden]="activeImageIndex !== i"
+    class="bg-[#0077ff6e] w-full text-white h-full z-10 flex-col flex justify-center items-center"
   >
-    <div class="flex flex-col items-center">
+    <div class="mb-10">
+      <h1 class="text-center text-[30px]">
+        <span class="line2 relative"> Testimonials </span>
+      </h1>
+    </div>
+    <div
+      class="flex flex-col items-center w3-animate-opacity"
+      *ngFor="let array of testimonial; let i = index"
+      [class.hidden]="activeImageIndex !== i"
+    >
       <div class="w-52 mb-2">
         <img [src]="array.img" class="rounded-[50%] object-cover" alt="" />
       </div>

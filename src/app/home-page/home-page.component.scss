@@ -34,3 +34,19 @@
     top: -120px;
   }
 }
+
+.line2 {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    background-color: white;
+    height: 5px;
+    border-radius: 50px;
+    left: 25%;
+    right: 25%;
+
+    bottom: -12px;
+    // transition: 0.4s;
+  }
+}

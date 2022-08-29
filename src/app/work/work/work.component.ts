@@ -23,14 +23,14 @@ export class WorkComponent {
       work: 'Web App made by me',
       date: '10 Apr. 2022',
     },
-    {
-      img: '../../../assets/images/work/Abhyuday.png',
-      title: 'Abhyuday',
-      type: 'Web App',
-      url: `https://abhyudaycluster.web.app/`,
-      work: 'Web App made by me',
-      date: '10 Nov. 2021',
-    },
+    // {
+    //   img: '../../../assets/images/work/Abhyuday.png',
+    //   title: 'Abhyuday',
+    //   type: 'Web App',
+    //   url: `https://abhyudaycluster.web.app/`,
+    //   work: 'Web App made by me',
+    //   date: '10 Nov. 2021',
+    // },
     {
       img: '../../../assets/images/work/Search_attributes.png',
       title: 'SearchAttributes',
