@@ -1,0 +1,76 @@
+.line {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    background-color: var(--theme-color);
+    height: 6px;
+    border-radius: 50px;
+    left: 30%;
+    right: 30%;
+
+    bottom: -12px;
+    // transition: 0.4s;
+  }
+}
+
+// .shadow {
+// }
+.shadow {
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  // box-shadow: 0 13px 8px -10px rgb(0 0 0 / 20%);
+  transition: 0.6s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 0px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+.border {
+  border: 1px solid;
+}
+
+.transition {
+  transition: 0.5s ease-in-out;
+  &:hover {
+    transform: 1.5;
+  }
+}
+
+.radious {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  justify-content: space-evenly;
+  row-gap: 2rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 1025px) {
+  .Grid {
+    grid-template-columns: 48% 48%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Grid {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 648px) {
+  .Grid {
+    grid-template-columns: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Grid {
+    grid-template-columns: 100%;
+  }
+}

@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsModule } from './about-us/about-us.module';
 import { ServicesModule } from './services/services.module';
+import { WorkModule } from './work/work.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ServicesModule } from './services/services.module';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     AboutUsModule,
+    WorkModule,
     ServicesModule,
   ],
   providers: [],

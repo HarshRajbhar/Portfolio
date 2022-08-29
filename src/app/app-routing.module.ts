@@ -17,13 +17,19 @@ const routes: Routes = [
     loadChildren: () =>
       import('./services/services.module').then((a) => a.ServicesModule),
   },
+  {
+    path: 'work',
+    loadChildren: () => import('./work/work.module').then((a) => a.WorkModule),
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabledBlocking',
-    scrollPositionRestoration: 'enabled',
-})],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabledBlocking',
+      scrollPositionRestoration: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

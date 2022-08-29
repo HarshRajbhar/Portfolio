@@ -1,44 +1,8 @@
-// .auto {
-//   position: relative;
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     height: 100%;
-//     left: 0;
-//     width: 100%;
-//     border-left: 3px solid white;
-//     background: #000;
-//     animation: typing 3s steps(15) infinite;
-//   }
-// }
-
-// @keyframes typing {
-//   100% {
-//     left: 100%;
-//     // margin: 0 -35px 0 35px;
-//   }
-// }
-
-// .div {
-//   position: relative;
-//   top: 0;
-//   height: 70px;
-//   overflow: hidden;
-//   animation: slide 6s steps(2) infinite;
-// }
-
-// @keyframes slide {
-//   100% {
-//     top: -140px;
-//     // margin: 0 -35px 0 35px;
-//   }
-// }
-
 .dynamic-txts {
   position: relative;
   overflow: hidden;
-  line-height: 35px;
-  height: 35px;
+  line-height: 39px;
+  height: 39px;
   li {
     position: relative;
     top: 0;
@@ -63,7 +27,6 @@
 @keyframes typing {
   100% {
     left: 100%;
-    // margin: 0 -35px 0 35px;
   }
 }
 @keyframes slide {

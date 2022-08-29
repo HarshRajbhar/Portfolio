@@ -18,3 +18,19 @@
     // transition: 0.4s;
   }
 }
+
+.line2 {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    background-color: var(--theme-color);
+    height: 6px;
+    border-radius: 50px;
+    left: 20%;
+    right: 20%;
+
+    bottom: -12px;
+    // transition: 0.4s;
+  }
+}

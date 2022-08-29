@@ -18,13 +18,13 @@
       </h1>
       <ul class="dynamic-txts mt-2 md:mt-0">
         <li>
-          <span class="text-[28px] mt-4">web Developer &nbsp;</span>
+          <span class="text-[28px] mt-4">web Developer&nbsp;</span>
         </li>
         <li>
-          <span class="text-[28px] mt-4">Frontend Developer &nbsp;</span>
+          <span class="text-[28px] mt-4">Front-end Developer&nbsp;</span>
         </li>
         <li>
-          <span class="text-[28px] mt-4">Freelancer &nbsp;</span>
+          <span class="text-[28px] mt-4">Freelancer&nbsp;</span>
         </li>
       </ul>
     </div>
@@ -40,3 +40,36 @@
 <div>
   <app-service></app-service>
 </div>
+
+<!-- Work Page start -->
+<div>
+  <app-work></app-work>
+</div>
+
+<!-- Testimonials -->
+
+<section class="w-full h-[40rem] relative overflow-hidden">
+  <div class="absolute w-full h-full overflow-hidden -z-10">
+    <img
+      src="../../assets/images/home_page/testemonial/overlay-bg.jpg"
+      class="object-cover w-full h-full"
+      alt=""
+    />
+  </div>
+  <div
+    class="bg-[#0077ff6e] w-full text-white h-full w3-animate-opacity z-10 flex justify-center items-center"
+    *ngFor="let array of testimonial; let i = index"
+    [class.hidden]="activeImageIndex !== i"
+  >
+    <div class="flex flex-col items-center">
+      <div class="w-52 mb-2">
+        <img [src]="array.img" class="rounded-[50%] object-cover" alt="" />
+      </div>
+      <p class="text-center text-[25px] font-[600] mb-1">{{ array.name }}</p>
+      <p class="text-center text-[15px] mb-3">{{ array.post }}</p>
+      <p class="text-center w-[90%] sm:w-[60%]">
+        {{ array.info }}
+      </p>
+    </div>
+  </div>
+</section>
