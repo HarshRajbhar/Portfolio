@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutUsModule } from './about-us/about-us.module';
 import { ServicesModule } from './services/services.module';
 import { WorkModule } from './work/work.module';
+import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { WorkModule } from './work/work.module';
     AppRoutingModule,
     AboutUsModule,
     WorkModule,
+    ContactModule,
     ServicesModule,
   ],
   providers: [],
