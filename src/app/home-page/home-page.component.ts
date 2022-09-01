@@ -40,4 +40,18 @@ export class HomePageComponent {
       }
     }, 4000);
   }
+  previousindex() {
+    if (this.activeImageIndex > 0) {
+      this.activeImageIndex--;
+      if (this.activeImageIndex === this.testimonial.length) {
+        this.activeImageIndex = 0;
+      }
+    }
+  }
+  nextindex() {
+    this.activeImageIndex++;
+    if (this.activeImageIndex === this.testimonial.length) {
+      this.activeImageIndex = 0;
+    }
+  }
 }
