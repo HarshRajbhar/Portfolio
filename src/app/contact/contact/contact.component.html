@@ -16,25 +16,33 @@
         <h1 class="text-[24px] font-[800] mb-5">
           <span class="line relative"> Send Message </span>
         </h1>
-        <div class="w-full">
+        <!-- <form action="mailto:hkrajbhar2002@gmail.com" class="w-full"> -->
+        <form
+          action="https://formsubmit.co/hkrajbhar2002@gmail.com"
+          method="POST"
+        >
           <input
             type="text"
+            name="Name"
             placeholder="Your  Name"
             class="border w-full my-2 text-[15px] capitalize py-2 rounded-[5px] pl-4 outline-none"
           />
           <input
             type="email"
+            name="Email"
             placeholder="Your  Email"
             class="border w-full my-2 text-[15px] capitalize py-2 rounded-[5px] pl-4 outline-none"
           />
           <input
             type="tel"
-            maxlength="10"
+            name="tel"
             (keydown)="validationForNumber($event)"
+            maxlength="10"
             placeholder="Number"
             class="border w-full my-2 text-[15px] capitalize py-2 rounded-[5px] pl-4 outline-none"
           />
           <textarea
+            name="Message"
             class="border w-full my-2 text-[15px] capitalize py-2 rounded-[5px] pl-4 outline-none"
             rows="5"
             placeholder="Message"
@@ -42,7 +50,7 @@
           <div class="w-full flex mt-2 justify-center items-center">
             <button class="btn">Send Message</button>
           </div>
-        </div>
+        </form>
       </div>
       <div class="w-full md:w-[48.5%] md:mt-0 mt-10">
         <h1 class="text-[24px] font-[800] mb-6">
