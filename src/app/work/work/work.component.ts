@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class WorkComponent {
   portfolio: any[] = [
     {
-      img: '../../../assets/images/work/fill_in.svg',
+      img: '/assets/images/work/fill_in.svg',
       title: 'Fill In',
       url: ``,
       type: 'Mobile App ',
@@ -16,28 +16,28 @@ export class WorkComponent {
       date: '10 Nov. 2021',
     },
     {
-      img: '../../../assets/images/work/aangee.jpg',
+      img: '/assets/images/work/aangee.jpg',
       title: 'Aangee',
       type: 'Web App',
       url: `https://rpsaangee.web.app/`,
       work: 'Web App made by me',
       date: '10 Apr. 2022',
     },
-    // {
-    //   img: '../../../assets/images/work/Abhyuday.png',
-    //   title: 'Abhyuday',
-    //   type: 'Web App',
-    //   url: `https://abhyudaycluster.web.app/`,
-    //   work: 'Web App made by me',
-    //   date: '10 Nov. 2021',
-    // },
     {
-      img: '../../../assets/images/work/Search_attributes.png',
+      img: '/assets/images/work/Search_attributes.png',
       title: 'SearchAttributes',
       type: 'Web App',
       url: `https://search-attributes.web.app/`,
       work: 'Web App made by me',
       date: '29 Aug. 2022',
+    },
+    {
+      img: '/assets/images/work/shiv_bullion.png',
+      title: 'Shiv Bullion',
+      type: 'Bullion software and mobile App',
+      url: `https://shivbullion.in/`,
+      work: 'Web App made by me',
+      date: '10 Nov. 2021',
     },
   ];
 }
