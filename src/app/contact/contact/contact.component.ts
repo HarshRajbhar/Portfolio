@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {
-  ValidateJSONObject,
-  JSONObjectKeyAndTypeValidator,
-} from 'rps-jsonvalidator/src/lib/general-libs-json-object-validator';
+// import {
+//   ValidateJSONObject,
+//   JSONObjectKeyAndTypeValidator,
+// } from 'rps-jsonvalidator/src/lib/general-libs-json-object-validator';
 
 interface contactUsInterface {
   your_name: string;
