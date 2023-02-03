@@ -1,8 +1,14 @@
-import { isPlatformServer } from '@angular/common';
+import { NgFor, isPlatformServer } from '@angular/common';
 import { Component, Inject, PLATFORM_ID, Type } from '@angular/core';
+import { ContactComponent } from '../contact/contact/contact.component';
+import { AboutUsComponent } from '../about-us/about-us/about-us.component';
+import { ServiceComponent } from '../services/service/service.component';
+import { WorkComponent } from '../work/work/work.component';
 
 @Component({
   selector: 'app-home-page',
+  standalone:true,
+  imports:[ContactComponent,AboutUsComponent,ServiceComponent,WorkComponent,NgFor],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
 })

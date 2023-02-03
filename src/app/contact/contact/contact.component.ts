@@ -13,6 +13,7 @@ interface contactUsInterface {
 
 @Component({
   selector: 'app-contact',
+  standalone:true,
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
