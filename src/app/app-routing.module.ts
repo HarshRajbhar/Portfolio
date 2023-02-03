@@ -8,11 +8,6 @@ const routes: Routes = [
     component: HomePageComponent,
   },
   {
-    path: 'about-us',
-    loadChildren: () =>
-      import('./about-us/about-us.module').then((a) => a.AboutUsModule),
-  },
-  {
     path: 'service',
     loadChildren: () =>
       import('./services/services.module').then((a) => a.ServicesModule),
@@ -30,8 +25,10 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      initialNavigation: 'enabledBlocking',
+      anchorScrolling: 'enabled',
       scrollPositionRestoration: 'enabled',
+      initialNavigation: 'enabledBlocking',
+      // scrollPositionRestoration: 'enabled',
     }),
   ],
   exports: [RouterModule],

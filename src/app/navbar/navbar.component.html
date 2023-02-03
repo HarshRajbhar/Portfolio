@@ -19,6 +19,7 @@
           >
             <a
               [routerLink]="list.url"
+              [fragment]="list.fragment"
               (click)="activeindex = list.index"
               routerLinkActive="active"
               [routerLinkActiveOptions]="{ exact: true }"
