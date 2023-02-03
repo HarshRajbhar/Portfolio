@@ -1,0 +1,116 @@
+<section class="w-full h-[50rem] relative overflow-hidden">
+  <div class="absolute w-full h-full overflow-hidden -z-10">
+    <img
+      src="/assets/images/home_page/testemonial/overlay-bg.jpg"
+      class="object-cover w-full h-full"
+      alt=""
+    />
+  </div>
+  <div
+    class="bg-[#0077ff96] w-full h-full z-10 flex-col flex justify-center items-center"
+  >
+    <div
+      class="bg-[color:var(--bg-color)] overflow-hidden flex justify-between flex-col w-[90%] md:flex-row md:w-[85%] lg:w-[65%] p-4 md:p-6 rounded-[5px] shadow"
+    >
+      <div class="w-full md:w-[48.5%]">
+        <h1 class="text-[24px] font-[800] mb-5">
+          <span class="line relative"> Send Message </span>
+        </h1>
+        <!-- <form action="mailto:hkrajbhar2002@gmail.com" class="w-full"> -->
+        <form
+          action="https://formsubmit.co/hkrajbhar2002@gmail.com"
+          method="POST"
+        >
+          <input
+            type="text"
+            name="Name"
+            placeholder="Your  Name"
+            required
+            class="border w-full my-2 text-[15px] capitalize py-2 rounded-[5px] pl-4 outline-none"
+          />
+          <input
+            type="email"
+            required
+            name="Email"
+            placeholder="Your  Email"
+            class="border w-full my-2 text-[15px] capitalize py-2 rounded-[5px] pl-4 outline-none"
+          />
+          <input
+            type="tel"
+            required
+            name="Mobile Number"
+            (keydown)="validationForNumber($event)"
+            minlength="10"
+            maxlength="10"
+            placeholder="Number"
+            class="border w-full my-2 text-[15px] capitalize py-2 rounded-[5px] pl-4 outline-none"
+          />
+          <textarea
+            name="Message"
+            required
+            class="border w-full my-2 text-[15px] capitalize py-2 rounded-[5px] pl-4 outline-none"
+            rows="5"
+            placeholder="Message"
+          ></textarea>
+          <div class="w-full flex mt-2 justify-center items-center">
+            <button class="btn">Send Message</button>
+          </div>
+        </form>
+      </div>
+      <div class="w-full md:w-[48.5%] md:mt-0 mt-10">
+        <h1 class="text-[24px] font-[800] mb-6">
+          <span class="line relative"> Get in Touch</span>
+        </h1>
+        <div class="w-full mt-8">
+          <div class="w-full flex items-center my-3 justify-between">
+            <div class="w-6">
+              <img
+                src="/assets/svg/location-outline.svg"
+                class="w-full"
+                alt=""
+              />
+            </div>
+            <div class="w-[94%]">
+              <p class="text-[15px]">Ahmedabad ,India .</p>
+            </div>
+          </div>
+          <div class="w-full flex items-center my-3 justify-between">
+            <div class="w-6">
+              <img
+                src="/assets/svg/phone-portrait-outline.svg"
+                class="w-full"
+                alt=""
+              />
+            </div>
+            <div class="w-[94%]">
+              <a href="tel:+918866128435" class="text-[15px]">+91 8866128435</a>
+            </div>
+          </div>
+          <div class="w-full flex items-center my-3 justify-between">
+            <div class="w-6">
+              <img src="/assets/svg/mail-outline.svg" class="w-full" alt="" />
+            </div>
+            <div class="w-[94%]">
+              <a href="mailto:hkrajbhar2002@gmail.com" class="text-[15px]"
+                >hkrajbhar2002@gmail.com</a
+              >
+            </div>
+          </div>
+          <div class="w-full flex items-center my-3 justify-between">
+            <div class="w-6">
+              <img src="/assets/svg/logo-github.svg" class="w-full" alt="" />
+            </div>
+            <div class="w-[94%]">
+              <a
+                href="https://github.com/HarshRajbhar"
+                target="_blank"
+                class="text-[15px]"
+                >github.com/HarshRajbhar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+.border {
+  border: 1px solid;
+}
+.shadow {
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 6%), 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.line {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    background-color: var(--theme-color);
+    height: 4px;
+    border-radius: 50px;
+    left: 0;
+    bottom: -8px;
+    // transition: 0.4s;
+  }
+}
+
+.line2 {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    background-color: var(--theme-color);
+    height: 6px;
+    border-radius: 50px;
+    left: 20%;
+    right: 20%;
+
+    bottom: -12px;
+    // transition: 0.4s;
+  }
+}
+button {
+  background: #0078ff;
+  padding: 15px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 50px;
+  transition: 0.5s all ease-in-out;
+
+  &:hover {
+    // background: #238affec;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+  }
+}

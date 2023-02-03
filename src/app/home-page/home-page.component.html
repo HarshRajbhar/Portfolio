@@ -1,1 +1,110 @@
-<p>home-page works!</p>
+<!-- Home Page  -->
+<div class="relative">
+  <div class="w-auto h-screen lg:h-[95vh] -mt-24 overflow-hidden -z-10">
+    <img
+      class="w-full h-full"
+      loading="lazy"
+      src="/assets/images/home_page/background_5.jpg"
+      alt="Images"
+    />
+  </div>
+
+  <div class="w-full h-full absolute top-0 text-white">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+      <h1
+        class="text-[45px] w-[70%] md:w-[90%] md:text-[55px] font-[600] text-center -mt-10 mb-2"
+      >
+        I am Harsh Rajbhar
+      </h1>
+      <ul class="dynamic-txts mt-2 md:mt-0">
+        <li>
+          <span class="text-[28px] mt-4">web Developer&nbsp;</span>
+        </li>
+        <li>
+          <span class="text-[28px] mt-4">Front-end Developer&nbsp;</span>
+        </li>
+        <li>
+          <span class="text-[28px] mt-4">Freelancer&nbsp;</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- About Us Page start -->
+<div id="about-us">
+  <app-about-us></app-about-us>
+</div>
+
+<!-- Service Page start -->
+<div>
+  <app-service></app-service>
+</div>
+
+<!-- Testimonials -->
+
+<section class="w-full h-[40rem] relative overflow-hidden">
+  <div class="absolute w-full h-full overflow-hidden -z-10">
+    <img
+      src="/assets/images/home_page/testemonial/overlay-bg.jpg"
+      class="object-cover w-full h-full"
+      alt=""
+    />
+  </div>
+  <div
+    class="bg-[#0077ff96] w-full text-white h-full z-10 flex-col flex justify-center items-center"
+  >
+    <div class="mb-10">
+      <h1 class="text-center text-[30px]">
+        <span class="line2 relative"> Testimonials </span>
+      </h1>
+    </div>
+    <div
+      class="flex flex-col items-center w3-animate-opacity"
+      *ngFor="let array of testimonial; let i = index"
+      [class.hidden]="activeImageIndex !== i"
+    >
+      <div class="w-52 mb-2">
+        <img [src]="array.img" class="rounded-[50%] object-cover" alt="" />
+      </div>
+      <p class="text-center text-[25px] font-[600] mb-1">{{ array.name }}</p>
+      <p class="text-center text-[15px] mb-3">{{ array.post }}</p>
+      <p class="text-center w-[90%] sm:w-[60%]">
+        {{ array.info }}
+      </p>
+    </div>
+    <div
+      class="absolute z-10 bg-[#151515] right-0 w-[30px] rounded-[2px] top-[45%] flex items-center h-[60px] cursor-pointer mr-5 justify-center opacity-70 hover:opacity-90"
+      (click)="nextindex()"
+      style="transition: all 0.5s ease"
+    >
+      <img
+        src="/assets/images/home_page/white-left.png"
+        alt="left arrow"
+        class="w-3"
+        style="transform: rotate(180deg)"
+      />
+    </div>
+    <div
+      class="absolute z-10 bg-[#151515] left-0 w-[30px] rounded-[2px] top-[45%] flex items-center h-[60px] cursor-pointer ml-5 justify-center opacity-70 hover:opacity-90"
+      (click)="previousindex()"
+      style="transition: all 0.5s ease"
+    >
+      <img
+        src="/assets/images/home_page/white-left.png"
+        alt="left arrow"
+        class="w-3"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Work Page start -->
+<div>
+  <app-work></app-work>
+</div>
+
+<!-- contact Us Page Start -->
+<div>
+  <app-contact></app-contact>
+</div>

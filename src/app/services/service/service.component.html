@@ -1,0 +1,32 @@
+<div class="bg-[color:var(--bg-color)] w-full flex py-8 justify-center">
+  <div class="w-[90%] flex flex-col items-center mt-5">
+    <h1
+      class="text-[35px] md:text-[45px] mb-10 text-[color:var(--dark-txt)] font-[700]"
+    >
+      <span class="line relative"> SERVICES </span>
+    </h1>
+    <div class="w-full md:w-[90%] Grid mt-4 mb-7">
+      <div
+        class="w-[95%] justify-self-center m-5 bg-white shadow rounded-[15px]"
+        *ngFor="let array of servicearray"
+      >
+        <div class="w-full flex py-12 justify-center">
+          <img
+            [src]="array.img"
+            loading="lazy"
+            alt="SERVICES images"
+            class="h-[12rem] w-auto"
+          />
+        </div>
+        <div class="w-full flex-col flex items-center text-center pb-10">
+          <h1 class="mb-3 text-[20px] text-[color:var(--dark-txt)] font-[700]">
+            {{ array.title }}
+          </h1>
+          <p class="w-[90%] text-[color:var(--light-txt)]">
+            {{ array.info }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
