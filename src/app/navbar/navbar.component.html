@@ -20,9 +20,6 @@
             <a
               [routerLink]="list.url"
               [fragment]="list.fragment"
-              (click)="activeindex = list.index"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
               class="w-full"
               >{{ list.name }}
             </a>
@@ -73,8 +70,7 @@
         <a
           [routerLink]="list.url"
           (click)="isHamActive = !isHamActive"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
+          [fragment]="list.fragment"
           class="w-full"
           >{{ list.name }}
         </a>
