@@ -9,13 +9,20 @@ const routes: Routes = [
         (a) => a.HomePageComponent
       ),
   },
+  {
+    path: ':frag',
+    loadComponent: () =>
+      import('./home-page/home-page.component').then(
+        (a) => a.HomePageComponent
+      ),
+  },
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      anchorScrolling: 'enabled',
       scrollPositionRestoration: 'enabled',
+      // anchorScrolling: 'enabled',
       initialNavigation: 'enabledBlocking',
       // scrollPositionRestoration: 'enabled',
     }),
