@@ -17,6 +17,7 @@ export class NavbarComponent {
       name: 'Home',
       url: '',
       index: 0,
+      fragment: '',
     },
     {
       name: 'About',
