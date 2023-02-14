@@ -13,6 +13,7 @@ import { ServiceComponent } from '../services/service/service.component';
 import { WorkComponent } from '../work/work/work.component';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription, firstValueFrom, retry } from 'rxjs';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-page',
@@ -27,7 +28,7 @@ import { Observable, Subscription, firstValueFrom, retry } from 'rxjs';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
 })
-export class HomePageComponent implements AfterViewInit,OnDestroy{
+export class HomePageComponent implements AfterViewInit, OnDestroy {
   activeImageIndex = 0;
 
   testimonial: any[] = [
@@ -51,8 +52,12 @@ export class HomePageComponent implements AfterViewInit,OnDestroy{
   ];
 
   HeaderHeight = 180;
-  subscription!:Subscription;
-  constructor(@Inject(PLATFORM_ID) id: any, private activated: ActivatedRoute) {
+  subscription!: Subscription;
+  constructor(
+    @Inject(PLATFORM_ID) id: any,
+    private activated: ActivatedRoute,
+    private meta: Meta
+  ) {
     if (isPlatformServer(id)) {
       return;
     }
@@ -62,20 +67,24 @@ export class HomePageComponent implements AfterViewInit,OnDestroy{
         this.activeImageIndex = 0;
       }
     }, 4000);
+    this.meta.updateTag({
+      name: 'description',
+      content: `Harsh Rajbhar, Harsh, Rajbhar , Kumar , Harsh Kumar Rajbhar, Web developer , Frontend Developer , Software Developer , Software Engineer, `,
+    });
   }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
   ngAfterViewInit(): void {
-    this.subscription=  this.activated.params.subscribe(({frag})=>{
+    this.subscription = this.activated.params.subscribe(({ frag }) => {
       console.log(frag);
-      setTimeout(()=>{
+      setTimeout(() => {
         this.scrollToFrag(frag);
-      })
-     
-    })
+      });
+    });
   }
-  private scrollToFrag(frag:string){
+  private scrollToFrag(frag: string) {
     if (typeof frag !== 'undefined') {
       firstValueFrom(
         new Observable((obs) => {
