@@ -18,8 +18,7 @@
             class="m-3 pb-2 cursor-pointer w-[10%] li text-white text-center relative text-[19px] font-[400]"
           >
             <a
-              [routerLink]="list.url"
-              [fragment]="list.fragment"
+              [routerLink]="['/',list.fragment]"
               class="w-full"
               >{{ list.name }}
             </a>

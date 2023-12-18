@@ -1,51 +1,35 @@
 <div class="bg-[color:var(--bg-color)] w-full flex py-8 justify-center">
   <div class="w-[90%] flex flex-col items-center mt-5">
-    <h1
-      class="text-[35px] md:text-[45px] mb-10 text-[color:var(--dark-txt)] font-[700]"
-    >
+    <h1 class="text-[35px] md:text-[45px] mb-10 text-[color:var(--dark-txt)] font-[700]">
       <span class="line relative"> Portfolio </span>
     </h1>
     <div class="w-full md:w-[90%] Grid mt-4 mb-7">
-      <div
-        class="w-[95%] justify-self-center bg-white shadow rounded-[15px] relative overflow-hidden"
-        *ngFor="let array of portfolio"
-      >
+      <div class="w-[95%] justify-self-center bg-white shadow rounded-[15px] relative overflow-hidden"
+        *ngFor="let array of portfolio">
         <div class="w-full flex justify-center overflow-hidden bg-[white]">
-          <img
-            *ngIf="array.title != 'Aangee'"
-            [src]="array.img"
-            loading="lazy"
-            alt="SERVICES images"
-            class="h-[17rem] my-4 transition"
-          />
-          <img
-            *ngIf="array.title == 'Aangee'"
-            [src]="array.img"
-            loading="lazy"
-            alt="SERVICES images"
-            class="h-[18.7rem] w-full transition"
-          />
+          <img *ngIf="array.title != 'Aangee'" [src]="array.img" loading="lazy" alt="SERVICES images"
+            class="h-[17rem] my-4 transition" />
+          <img *ngIf="array.title == 'Aangee'" [src]="array.img" loading="lazy" alt="SERVICES images"
+            class="h-[18.7rem] w-full transition" />
         </div>
         <p class="w-full block h-[1px] bg-[color:var(--light-txt)]"></p>
-        <div
-          class="w-full flex-col flex items-center pt-2 bg-[color:var(--bg-color)] pb-10 px-4"
-        >
-          <h1
-            class="w-[80%] text-[18px] mt-9 2xl:mt-3 text-center pb-1 text-[color:var(--dark-txt)] font-[600]"
-          >
+        <div class="w-full flex-col flex items-center pt-2 bg-[color:var(--bg-color)] pb-10 px-4">
+          <h1 class="w-[80%] text-[18px] mt-9 2xl:mt-3 text-center pb-1 text-[color:var(--dark-txt)] font-[600]">
             {{ array.title }}
             <span class="text-[15px]"> ({{ array.type }}) </span>
           </h1>
-          <span
-            class="absolute right-4 text-[color:var(--theme-color)]"
-            *ngIf="array.url != ''"
-            ><a [href]="array.url" class="flex" target="_blank">
+          <h1 class="w-[80%] text-[18px] mt-9 2xl:mt-3 text-center pb-1 text-[color:var(--dark-txt)] font-[600]">
+            <p class="text-[15px]">Project Completed Date</p>
+            <p class="font-bold">{{ array.date }}</p>
+          </h1>
+          <h1 class="w-[80%] text-[18px] mt-9 2xl:mt-3 text-center pb-1 text-[color:var(--dark-txt)] font-[600]">
+            <p class="text-[15px]">Job Role</p>
+            <p class="font-bold">{{ array.work }}</p>
+          </h1>
+          <span class="absolute right-4 text-[color:var(--theme-color)]" *ngIf="array.url != ''"><a [href]="array.url"
+              class="flex" target="_blank">
               Open
-              <img
-                src="/assets/images/work/open-outline.svg"
-                alt=""
-                class="w-4"
-              />
+              <img src="/assets/images/work/open-outline.svg" alt="" class="w-4" />
             </a>
           </span>
         </div>

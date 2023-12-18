@@ -1,10 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-service',
-  standalone:true,
-  imports:[NgFor],
+  standalone: true,
+  imports: [NgFor],
   templateUrl: './service.component.html',
   styleUrls: ['./service.component.scss'],
 })
@@ -36,4 +37,17 @@ export class ServiceComponent {
       info: `Simplicity is one of the golden rules of app design. The audience should have an enjoyable, positive experience when using your app.`,
     },
   ];
+
+  constructor(private meta: Meta) {
+    this.meta.updateTag({
+      name: 'description',
+      content: `The web development process involves taking the
+       graphical elements defined in the design process and coding them into a custom theme. ,
+       HTML5 , ANGULAR , TAILWIND CSS , BOOTSTRAP , Web Developer , 
+       Having a responsive layout means that your website fluidly resizes for optimal viewing
+       regardless of the screen size or device (e.g. iPhone, iPad). ,
+       Our approach to website design is to create a website that strengthens your company’s brand 
+       while ensuring ease of use and simplicity for your audience.`,
+    });
+  }
 }
