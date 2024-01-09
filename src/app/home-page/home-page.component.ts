@@ -76,9 +76,9 @@ export class HomePageComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
-  ngAfterViewInit(): void {
-    this.subscription = this.activated.params.subscribe(({ frag }) => {
-      console.log(frag);
+  ngAfterViewInit() {
+    this.subscription = this.activated.fragment.subscribe((frag: any) => {
+      // console.log(frag);
       setTimeout(() => {
         this.scrollToFrag(frag);
       });

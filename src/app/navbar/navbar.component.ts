@@ -1,6 +1,6 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   activeindex = 0;
   isHamActive = false;
   navlist: any[] = [
@@ -17,7 +17,7 @@ export class NavbarComponent {
       name: 'Home',
       url: '',
       index: 0,
-      fragment: '',
+      fragment: 'home',
     },
     {
       name: 'About',
@@ -44,4 +44,16 @@ export class NavbarComponent {
       index: 4,
     },
   ];
+  constructor(private activatedroute: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.activatedroute.fragment.subscribe((val) => {
+      const nav = this.navlist.filter((f) => {
+        return val === f.fragment;
+      });
+      // console.log(nav);
+
+      this.activeindex = nav[0]?.index;
+    });
+  }
 }

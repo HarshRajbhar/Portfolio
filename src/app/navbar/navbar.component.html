@@ -18,7 +18,10 @@
             class="m-3 pb-2 cursor-pointer w-[10%] li text-white text-center relative text-[19px] font-[400]"
           >
             <a
-              [routerLink]="['/',list.fragment]"
+              routerLink=""
+              [fragment]="list.fragment"
+              (click)="activeindex = list.index"
+              [class.active]="activeindex === list.index"
               class="w-full"
               >{{ list.name }}
             </a>
@@ -71,6 +74,8 @@
           (click)="isHamActive = !isHamActive"
           [fragment]="list.fragment"
           class="w-full"
+          (click)="activeindex = list.index"
+          [class.active]="activeindex === list.index"
           >{{ list.name }}
         </a>
       </li>
